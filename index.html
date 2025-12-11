@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mul - Your Water Spirit Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Nunito', 'sans-serif'],
+            },
+            colors: {
+              mul: {
+                light: '#E0F7FA', // Very light cyan
+                soft: '#B2EBF2', // Soft cyan
+                main: '#4DD0E1', // Main Mul blue
+                deep: '#0097A7', // Deeper accent
+                glow: '#80DEEA', // Glow color
+                sad: '#90A4AE',   // Greyish blue for sad
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-fast': 'float 3s ease-in-out infinite',
+              'float-slow': 'float 8s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'wiggle': 'wiggle 3s ease-in-out infinite',
+              'wave': 'wave 2s ease-in-out infinite',
+              'blink': 'blink 4s infinite',
+              'bounce-wild': 'bounce 0.5s infinite',
+              'tide': 'tide 3s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-5deg)' },
+                '50%': { transform: 'rotate(5deg)' },
+              },
+              wave: {
+                 '0%, 100%': { transform: 'rotate(0deg)' },
+                 '25%': { transform: 'rotate(-10deg)' },
+                 '75%': { transform: 'rotate(10deg)' },
+              },
+              blink: {
+                '0%, 90%, 100%': { transform: 'scaleY(1)' },
+                '95%': { transform: 'scaleY(0.1)' },
+              },
+              tide: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(3px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for a softer look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+      body {
+        background: linear-gradient(180deg, #F0F9FF 0%, #E0F2FE 100%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
